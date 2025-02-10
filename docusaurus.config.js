@@ -22,7 +22,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Nvgalch-test', // Usually your GitHub org/user name.
+  organizationName: 'nvgalch', // Usually your GitHub org/user name.
   projectName: 'nvgalch-docusaurus', // Usually your repo name.
   deploymentBranch: 'deployment',
 
