@@ -1,0 +1,8 @@
+{
+  "label": "Панель управления",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Панель управления содержит разделы:"
+  }
+}
