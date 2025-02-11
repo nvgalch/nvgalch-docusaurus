@@ -1,71 +1,66 @@
 ---
-sidebar_position: 0
+sidebar_position: 1
 ---
 
-# Типы приложений ВКонтакте
+# Types of VK apps
 
-ВКонтакте вы можете создавать следующие типы приложений:
+On VK, you can create the following types of apps:
 
-* [Встраиваемое приложение](#Мини-приложения)
-* [Standalone-приложение](#Standalone-приложение)
-* [Сайт](#Сайт)
-* [Скилл Маруси](#Скилл%20Маруси)
+* [Embedded app](#Embedded%20apps)
+* [Standalone app](#Standalone%20apps)
+* [Website](#Websites)
+* [Marusia skill](#Marusia%20skills)
 
-## Встраиваемое приложение
+## Embedded apps
 
-**Встраиваемое приложение** — веб-приложение:
+**Embedded apps** are web apps that:
 
-* Которое размещено на внешнем по отношению к ВКонтакте сайте.
-* Страница которого отображается внутри UI ВКонтакте — в iframe или WebView.
-* Которое общается с ВКонтакте через open-source библиотеку [VK Bridge](bridge/overview), получая доступ к социальным механикам и взаимодействию с пользователями.
+* Are hosted outside of VK.
+* Have their pages displayed within the VK UI via an iframe or WebView.
+* Interact with VK using the open-source [VK Bridge](bridge/overview) library that enables social mechanics and user interactions.
 
-### Мини-приложение
+### Mini apps
 
-**Мини-приложение ВКонтакте** — встраиваемое приложение для решения каких-то задач или выполнения целей. С помощью мини-приложений пользователи могут вести дневник спортивных тренировок, проходить тесты или заказывать обед совместно.
+**VK mini apps** are embedded apps designed to help users complete specific tasks or achieve certain goals. With mini apps, VK users can keep a fitness diary, take quizzes or order lunch together with colleagues.
 
-Примеры мини-приложений, доступных по прямой ссылке:
+Examples of mini apps that are available via direct link:
 
 * [Tool 42](https://vk.com/tool42)
-* [Занимариум](https://vk.com/zanimarium)
+* [Zanimarium](https://vk.com/zanimarium)
 
-### Игра
+### Games
 
-**Игра ВКонтакте** — встраиваемое приложение, задача которого завлечь пользователей в игру. С помощью игр пользователи могут увлекательно провести время, насладиться графикой и сюжетом, почувствовать удовольствие от победы и вернуться в игру в любой момент. Игры запускаются прямо из интерфейса ВКонтакте — никаких скачиваний, установок и регистрации.
+**VK games** are embedded apps designed to engage users in playing games. Their purpose is to enable users to have a fun time, compete with each other and feel the thrill of winning, enjoy great graphics and an engaging plot, all while being able to return to the game at any time. Games are launched directly from the VK interface without the need for downloads, installations or registrations.
 
-Примеры игр, доступных по прямой ссылке:
+Examples of games that are available via direct link:
 
-* [Наруто - схватка ниндзя](https://vk.com/app7075874)
-* [Монеточка](https://vk.com/raccoin)
+* [Naruto - Ninja Battle](https://vk.com/app7075874)
+* [Raccoin](https://vk.com/raccoin)
 
-### Плагин
+### Technical aspects of embedded apps
 
-**Плагин** — это мини-приложение, которое работает только в контексте сообщества и расширяет его функции. С помощью плагинов вы можете реализовать новые возможности в сообществе, например, добавить форму для записи на услугу или создать лендинг для подписчиков сообщества.
+From a technical standpoint, both games and mini apps are simply web apps. Their files are hosted on your server that is connected to the internet. The server-side code operates on the server, while the client-side code is loaded and runs in the browser:
 
-Примеры доступны в [каталоге плагинов для сообществ](https://vk.com/community_apps).
+* When launched from the desktop or mobile version of the VK website, apps run in an iframe located on VK.
+* In the mobile app for Android and iOS, apps run in a WebView control element opened from the mobile app.
 
-### Техническая сторона встраиваемых приложений
+Mini apps and games have different screens for settings. There, some settings may be similar, while others differ in order to fit specific tasks.
 
-С технической точки зрения игры и мини-приложения — это веб-приложения. Их файлы располагаются на вашем сервере, подключённом к интернету. Серверная часть их кода работает на удалённом компьютере, а клиентская загружается и работает в браузере:
+To exchange data with VK, the server side of games and mini apps uses requests to the VK API, while the client side employs the [VK Bridge](bridge/overview) library.
 
-* При запуске из десктопной или мобильной версий сайта ВКонтакте — в iframe, который находится на странице ВКонтакте.
-* В мобильном приложении для Android и iOS — в элементе управления WebView, который открывается из мобильного приложения.
+## Standalone apps
 
-Мини-приложения и игры используют разные экраны настроек. Часть настроек похожи, а часть различается для выполнения специфических задач.
+**VK standalone apps** are apps required for integrating your apps with VK. Such apps use the [VK API](api/overview) to exchange data, but this type of app can't be opened on VK.
 
-Для обмена данными с ВКонтакте серверная часть игр и мини-приложений использует запросы к API ВКонтакте, а клиентская — библиотеку [VK Bridge](bridge/overview).
+## Websites
 
-## Standalone-приложение
+**VK websites** are apps required for connecting VK widgets to a website. This type of app can't be opened.
 
-**Standalone-приложение ВКонтакте** — приложение, которое необходимо для интеграции собственных приложений с ВКонтакте. Такие приложения используют [API ВКонтакте](api/overview) для обмена данными, но открыть такой тип приложений ВКонтакте нельзя.
+## Marusia skills
 
-## Сайт
-
-**Сайт ВКонтакте** — приложение, которое необходимо для подключения виджетов ВКонтакте к сайту. Открыть такой тип приложений ВКонтакте нельзя.
-
-## Скилл Маруси
-
-**Скилл Маруси** — приложение, которое позволяет добавлять скилл в базу навыков Маруси. Открыть такой тип приложений ВКонтакте нельзя.
+**Marusia skills** are apps that add skills to Marusia's skill base. This type of app can't be opened.
 
 :::warning
-**Важно!** 24 января 2025 года мы отключили создание новых пользовательских скиллов Маруси. Все ранее созданные скиллы доступны для редактирования.
+**Attention!** On 24 January 2025, you'll no longer be able to create new Marusia custom skills, but keep access to previously created ones.
 :::
+
