@@ -6,7 +6,9 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e5785;
+  --ifm-code-border-radius: 0.75rem;
+  --ifm-navbar-height: 5.75rem;
+  --ifm-color-primary: #3d5ce5;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
@@ -15,6 +17,28 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --base-neutral-0: #ffffff;
+  --primary-neutral-100: #f3f4f6;
+  --primary-neutral-200: #e5e7eb;
+  --neutral-mid-500: #6c737f;
+  --primary-neutral-600: #4d5761;
+  --header-border-bottom: #d2d6db;
+  --neutral-mid-700: #28334f;
+  --neutral-mid-400: #9da4ae;
+  --primary-neutral-800: #1f2a37;
+  --secondary-blue-400: #80a3ff;
+  --secondary-blue-500: #3970fd;
+  --secondary-blue-900: #001c63;
+  --primary-blue-600: #1e56e3;
+  --main-bg-color: #ffffff;
+  --sidebar-bg-color: #f3f4f6;
+  --next-prev-bg-color: #ffffff;
+  --next-prev-border-color: #e5e7eb;
+  --search-dark-bg-color: #28334f;
+  --ifm-color-info-dark: #c6d6ff;
+  --purple-pill: #4958fa;
+  --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15,12.5,L10,7.5L5,12.5" stroke="gray" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  --cta-button-green: #22c55e;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -27,4 +51,212 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* tabs */
+.tabs-container {
+  padding: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: solid 1px var(--purple-pill);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.tabs__item {
+  border-bottom: 0;
+  margin: 0 4px;
+  padding: 4px 12px 5px 12px;
+  border-radius: 48px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--neutral-mid-400);
+}
+
+.tabs__item:hover {
+  background-color: var(--primary-neutral-100);
+  color: var(--primary-neutral-600);
+}
+
+.tabs__item--active,
+.tabs__item--active:hover {
+  border-bottom-color: var(--primary-blue-600);
+  background-color: var(--purple-pill);
+  color: var(--base-neutral-0) !important;
+  box-shadow: 0px 1px 2px 0px rgba(28, 38, 63, 0.05);
+}
+
+[data-theme='dark'] .tabs__item:hover {
+  background-color: var(--primary-neutral-200);
+}
+
+[data-theme='dark'] .tabs-container {
+  background: var(--color-gray-82);
+}
+
+.tabs-container code {
+  background: var(--color-gray-74);
+}
+
+/* code */
+
+code {
+  border-radius: 10px;
+}
+p code,
+td code,
+li code {
+  font-size: 0.9375rem;
+  border-radius: 3px;
+  padding: 2px 3px;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+  border-radius: 6px;
+  padding: 3px 6px;
+}
+
+pre code {
+  background: #f0f4ff;
+  border: 1px solid #c6d6ff;
+}
+
+/* tables */
+
+table {
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  width: fit-content;
+  max-width: 100%;
+  font-size: 0.9375rem;
+}
+table thead {
+  background-color: #f3f4f6;
+}
+table thead tr {
+  border-bottom: 0;
+}
+table tr:nth-child(2n) {
+  background-color: transparent;
+}
+table tr {
+  border-top: 0;
+}
+table thead tr th,
+table tbody tr td {
+  border: 0;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child {
+  border-right: 0 !important;
+}
+table tbody tr:last-child td {
+  border-bottom: 0 !important;
+}
+
+table thead tr th {
+  color: #001c63;
+}
+table th,
+table td {
+  padding: 12px 24px;
+}
+
+/* admonitions */
+
+.theme-admonition,
+.alert {
+  border-radius: 12px;
+  box-shadow: none;
+  padding: 24px;
+}
+.theme-admonition > div:first-child,
+.alert > div:first-child {
+  display: flex;
+  align-items: center;
+}
+.theme-admonition .theme-admonition,
+.alert .alert {
+  border-radius: 8px;
+  margin-bottom: 0 !important;
+}
+.theme-admonition .theme-admonition .theme-admonition,
+.alert .alert .alert {
+  border-radius: 6px;
+}
+.theme-admonition > div,
+.alert > div,
+.theme-admonition p,
+.alert p {
+  color: #1f2a37;
+}
+.theme-admonition a,
+.alert a {
+  color: #1e56e3;
+}
+.theme-admonition code,
+.alert code {
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #1f2a37;
+}
+.theme-admonition-note,
+.alert--secondary {
+  border: 1px solid #d2d6db;
+  background-color: #f3f4f6;
+}
+
+.theme-admonition-note code,
+.alert--secondary code {
+  border: 1px solid #d2d6db;
+  background-color: #e5e7eb;
+}
+.theme-admonition-tip,
+.alert--success {
+  border: 1px solid #b3dfd2;
+  background-color: #ebf8f4;
+}
+.theme-admonition-tip code,
+.alert--success code {
+  border: 1px solid #b3dfd2;
+  background-color: #d4f4ea;
+}
+.theme-admonition-info,
+.alert--info {
+  border: 1px solid #c6d6ff;
+  background-color: #f0f4ff;
+}
+.theme-admonition-info code,
+.alert--info code {
+  border: 1px solid #c6d6ff;
+  background-color: #dfe8ff;
+  border-radius: 10px;
+}
+.theme-admonition-caution,
+.alert--warning {
+  border: 1px solid #ffce70;
+  background-color: #fff3d4;
+}
+.theme-admonition-caution code,
+.alert--warning code {
+  border: 1px solid #ffce70;
+  background-color: #ffe4b0;
+}
+.theme-admonition-danger,
+.alert--danger {
+  border: 1px solid #fba5a6;
+  background-color: #fee2e2;
+}
+
+.theme-admonition-danger code,
+.alert--danger code {
+  border: 1px solid #fba5a6;
+  background-color: #fecacb;
 }
