@@ -1,6 +1,10 @@
 import TabExample from './_features/_tabs.mdx';
+import TOCInline from '@theme/TOCInline';
 
 # Разные элементы
+
+Оглавление:
+<TOCInline toc={toc} />
 
 ## Таблица {#table}
 
@@ -56,3 +60,18 @@ import TabExample from './_features/_tabs.mdx';
 :::danger
 Кричащие красные
 :::
+
+## Прочее {#other}
+
+Текст с иконкой: ![](../static/img/vk-short.svg).
+
+Разделитель:
+
+---
+
+<p>Это <sub>Нижний</sub> индекс.</p>
+
+<p>Это <sup>Верхний</sup> индекс.</p>
+
+Эмодзи: :smile:
+
