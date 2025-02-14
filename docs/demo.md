@@ -1,17 +1,15 @@
 ---
-sidebar_label: Идеальная страница
+sidebar_label: Показательная страница
 sidebar_position: 8
 description: Страница, чтоб показать, что умеет докузаурус
-keywords:
-   - докузаурус
-   - табы
-   - докузаурус
-   - табы
 ---
 
-# Табы
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-Сейчас так:
+## Табы
+
+**Сейчас так**
 
 ### Как запустить игру в Web
 
@@ -55,10 +53,7 @@ keywords:
 
    > При отправке сообщения мессенджер определяет, что ссылка указывает на игру, и добавляет сниппет игры к сообщению. Вы можете запустить игру, нажав на кнопку в сниппете.
 
-Можно так:
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+**Можно так**
 
 ## Как запустить игру
 
@@ -85,7 +80,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 <TabItem value="в мобилке" label="В мобильном приложении">
-    
+
 #### Из списка недавно запущенных игр
 
 1. [Запустите](#Как%20запустить%20игру%20по%20прямой%20ссылке) игру в десктопной версии сайта ВКонтакте. После этого она попадёт в список игр, которые были запущены недавно.
@@ -135,3 +130,80 @@ import TabItem from '@theme/TabItem';
 Кричащие красные
 :::
 
+## Каты
+
+**Сейчас так**
+
+### Правила CSS
+
+Наш пример хранит информацию о стилях веб-элементов в CSS-файлах. Мы указываем стили в соответствии с методологией [БЭМ (Блок, Элемент, Модификатор)](https://ru.bem.info/methodology/css/). То есть мы не указываем стили для тегов или идентификаторов, а работаем только с селекторами классов.
+
+```CSS
+/* Файл src/components/Products/Products.css */
+
+.Products {  
+  width: 100%;
+  height: max-content;
+  margin-bottom: 16px;
+}
+
+.Products_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Products_header_avatar {
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 100%;
+}
+
+.Products_header_avatar__unload {
+  opacity: 0;
+}
+```
+
+**Можно так**
+
+Наш пример хранит информацию о стилях веб-элементов в CSS-файлах. Мы указываем стили в соответствии с методологией [БЭМ (Блок, Элемент, Модификатор)](https://ru.bem.info/methodology/css/). То есть мы не указываем стили для тегов или идентификаторов, а работаем только с селекторами классов.
+
+<details>
+  <summary>CSS</summary>
+
+```CSS
+/* Файл src/components/Products/Products.css */
+
+.Products {  
+  width: 100%;
+  height: max-content;
+  margin-bottom: 16px;
+}
+
+.Products_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Products_header_avatar {
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 100%;
+}
+
+.Products_header_avatar__unload {
+  opacity: 0;
+}
+```
+</details>
+
+## Таблицы
+
+| Можно | И как оно? |
+|---|---|
+| Делать списки, которые не занимют 8 строк в MD | Потому что докузавр поддерживает html и сделать список просто как:<br/> - Дважды. <br/> - Два. |
+| Вставлять инлайн иконки | ![](../static/img/vk-short.svg) |
+| И даже полноценные картинки | ![деловой Хоппер](../static/img/khopper.png) |
+| Использовать верхний и нижний индексы | Вот <sub>нижний</sub><br/>Вот <sup>верхний</sup> |
+| Выкладывать файлы | <a target="_blank" href={ require("../static/img/khopper.png").default } download>скачай делового Хоппера</a>|
