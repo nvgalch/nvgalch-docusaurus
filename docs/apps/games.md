@@ -36,7 +36,7 @@ sidebar_position: 2
   
 ## Полезные ссылки
 
-* [Библиотека VK Bridge](../vk-bridge/getting-started.md)
+* [Библиотека VK Bridge](../vk-bridge/)
 * [API ВКонтакте](https://dev.vk.com/reference)
 * [Игровые и социальные механики](games/promotion/game-mechanics/overview)
 * [Рекламные объявления](games/promotion/ad)
