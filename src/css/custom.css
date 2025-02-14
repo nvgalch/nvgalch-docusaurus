@@ -260,3 +260,7 @@ table td {
   border: 1px solid #fba5a6;
   background-color: #fecacb;
 }
+
+.hidden {
+  display: none! important;
+  }
