@@ -52,6 +52,20 @@ const config = {
       },
     },
   },
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: '/docs/page',
+            to: '/docs/page-2',
+          },
+        ]
+      }
+      ]
+    ],
+
   presets: [
     [
       'classic',
