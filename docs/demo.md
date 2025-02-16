@@ -210,4 +210,8 @@ import TabItem from '@theme/TabItem';
 | Использовать верхний и нижний индексы | Вот <sub>нижний</sub><br/>Вот <sup>верхний</sup> |
 | Выкладывать файлы | <a target="_blank" href={ require("../static/img/khopper.png").default } download>скачай делового Хоппера</a>|
 
-https://nvgalch.github.io/nvgalch-docusaurus/docs/page/
+## Редиректы
+
+Можно настроить редиректы в формате from > to. 
+
+Этой страницы нет в доке, для нее настроен редирект: https://nvgalch.github.io/nvgalch-docusaurus/docs/page/
