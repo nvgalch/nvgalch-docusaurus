@@ -209,3 +209,5 @@ import TabItem from '@theme/TabItem';
 | И даже полноценные картинки | ![деловой Хоппер](../static/img/khopper.png) |
 | Использовать верхний и нижний индексы | Вот <sub>нижний</sub><br/>Вот <sup>верхний</sup> |
 | Выкладывать файлы | <a target="_blank" href={ require("../static/img/khopper.png").default } download>скачай делового Хоппера</a>|
+
+https://nvgalch.github.io/nvgalch-docusaurus/docs/page/

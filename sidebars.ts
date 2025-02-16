@@ -37,6 +37,7 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
         },
       ]
     },
+    'page-2',
   ],
   apiSidebar: [
     {
